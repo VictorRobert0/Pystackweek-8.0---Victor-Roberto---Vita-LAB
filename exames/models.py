@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils.safestring import mark_safe
 # Create your models here.
 class TiposExames(models.Model):
     tipo_choices = (
@@ -32,6 +32,8 @@ class SolicitacaoExame(models.Model):
     def __str__(self):
         return f'{self.usuario} | {self.exame.nome}'
     
+from django.utils.safestring import mark_safe
+from django.utils.safestring import mark_safe
 
 class PedidosExames(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.DO_NOTHING)
