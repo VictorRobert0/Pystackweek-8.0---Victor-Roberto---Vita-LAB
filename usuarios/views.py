@@ -38,6 +38,7 @@ def cadastro(request):
 
             )
             messages.add_message(request, constants.SUCCESS, 'Usuario salvo com sucesso')
+            return render (request, 'login.html')
         except:
             messages.add_message(request, constants.ERROR, 'Erro interno do sistema, entre em contato com o administrador')
             return redirect('/usuarios/cadastro')
@@ -56,7 +57,7 @@ def logar(request):
 
         if user:
             login(request, user)
-            return redirect('/') #vai dar erro por enquanto
+            return redirect('/exames/solicitar_exames/') 
         else:
             messages.add_message(request, constants.ERROR, 'Usuario e/ou senha incorretos, verifique')
             return redirect('/usuarios/login')
