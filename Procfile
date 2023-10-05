@@ -1,0 +1,1 @@
+web: gunicorn vitalab.wsgi --log-file -
