@@ -12,7 +12,7 @@
 {% block 'conteudo' %}
     <div class="container">
 
-        <h3 class="font-destaque-secundaria"> <img width="10%" src="{% static 'geral/img/logo.png' %}" alt="">Cadastre-se</h3>
+        <h3 class="font-destaque-secundaria"> <img width="10%" src="{% static 'geral/img/logo.png' %}" alt="">Área de acesso</h3>
 
         {% if messages %}
             <br>
@@ -31,7 +31,7 @@
                 <br>
                 <label>Senha</label>
                 <br>
-                <input type="text" class="input-default" name="senha">
+                <input type="password" class="input-default" name="senha">
                 <br>
                 <br>
                 <input type="submit" class="btn-default" value="Logar">

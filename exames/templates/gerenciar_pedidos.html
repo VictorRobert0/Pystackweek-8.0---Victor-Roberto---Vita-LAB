@@ -41,8 +41,12 @@
                          
                             <a href="{% url 'cancelar_pedido' pedidos.id %}"  class="btn btn-danger {% if not pedidos.agendado %} disabled {% endif %}">Cancelar</a>
                         </td>
+                        
                     </tr>
                 {% endfor %}
+                
+                <td><a style="text-decoration:none;"  href="{% url 'gerenciar_exames' %}" class="btn btn-success">Gerenciar Exames</a></td>
+                
                
               </table>
               
